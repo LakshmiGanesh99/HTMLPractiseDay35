@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Website Page Layout</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .Col1 {
+            background: green;
+            flex: 1;
+        }
+
+        .Col2 {
+            background: red;
+            flex-direction: column;
+            flex: 5;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .content>article {
+            flex: 3;
+            min-height: 60vh;
+        }
+
+        .content>aside{
+            flex: 1;
+            background: beige;
+        }
+
+        header,footer {
+            background: yellowgreen;
+            height: 20vh;
+        }
+
+        header, footer, article, aside, nav{
+            padding: 1em;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <nav class="Col1">Nav</nav>
+    <div class="Col2">
+        <header class="header">Header</header>
+        <main class="content">
+            <article>Article</article>
+            <aside>Aside</aside>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
